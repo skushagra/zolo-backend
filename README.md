@@ -3,7 +3,8 @@
 ## Setup
 1. Install and setup go on your system.
 2. Install and setup mysql on you system. Createa a DB with the followinf schema :-
- ![zolo-backend-](https://github.com/skushagra/zolo-backend/assets/66439372/aa163add-33c7-4334-9f3c-0915a46c760d)
+ ![image](https://github.com/skushagra/zolo-backend/assets/66439372/89d0bafa-7ba2-431b-a705-094609ffb76a)
+
 3. Clone the git repository
 
 ```
