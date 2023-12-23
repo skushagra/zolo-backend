@@ -1,4 +1,5 @@
 # Zolo Book Sharing Backend
+created by Kushagra
 
 ## Setup
 1. Install and setup go on your system
