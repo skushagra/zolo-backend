@@ -9,5 +9,5 @@ import (
 * Function to greet user at root
  */
 func GreetUser(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, World!")
+	fmt.Fprintf(w, "Hello, World! Server is up and running.")
 }

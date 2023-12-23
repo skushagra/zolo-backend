@@ -1,3 +1,9 @@
+/**
+* Project: Zolo Backend
+* Author: Kushagra S
+* Created: Sunday, 24th December 2023
+ */
+
 package main // root file of the project with package name main
 
 import (
