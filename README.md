@@ -1,8 +1,9 @@
 # Zolo Book Sharing Backend
 
 ## Setup
-1. Install and setup go on your system
-2. Clone the git repository 
+1. Install and setup go on your system.
+2. Install and setup mysql on you system.
+3. Clone the git repository 
 ```
 git clone https://github.com/skushagra/zolo-backend.git
 ```
