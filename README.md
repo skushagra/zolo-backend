@@ -1,5 +1,7 @@
 # Zolo Book Sharing Backend
 
+This repository contains the backend for an application that allows users to share books among themselves, users can add books, borrow a book, return a book and see all available books. 
+
 ## Enviornment Variables
 
 - `DB_USER` - To store username of the mysql user (default = "kali")
