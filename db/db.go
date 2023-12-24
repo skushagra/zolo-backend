@@ -2,8 +2,7 @@ package db // package db to handle database calls
 
 import (
 	"database/sql" // Go module to handle SQL calls
-	"errors"
-	"os" // Go module to handle OS calls
+	"os"           // Go module to handle OS calls
 
 	_ "github.com/go-sql-driver/mysql" // Go module to handle MySQL calls
 )
@@ -162,31 +161,30 @@ func ReturnBook(borrow_id int) {
 func Connect() (*sql.DB, error) {
 	db_user := os.Getenv("DB_USER")
 	if db_user == "" {
-		return nil, errors.New("DB_USER is not set")
+		db_user = "kali"
 	}
 
 	db_pass := os.Getenv("DB_PASS")
 	if db_pass == "" {
-		return nil, errors.New("DB_PASS is not set")
+		db_pass = "kali"
 	}
 
 	db_host := os.Getenv("DB_HOST")
 	if db_host == "" {
-		return nil, errors.New("DB_HOST is not set")
+		db_host = "127.0.0.1"
 	}
 
 	db_port := os.Getenv("DB_PORT")
 	if db_port == "" {
-		return nil, errors.New("DB_PORT is not set")
+		db_port = "3306"
 	}
 
 	db_name := os.Getenv("DB_NAME")
 	if db_name == "" {
-		return nil, errors.New("DB_NAME is not set")
+		db_name = "zolo"
 	}
 
-	// db, err := sql.Open("mysql", db_user+":"+db_pass+"@tcp("+db_host+":"+db_port+")/"+db_name)
-	db, err := sql.Open("mysql", "kali:kali@tcp(127.0.0.1:3306)/zolo")
+	db, err := sql.Open("mysql", db_user+":"+db_pass+"@tcp("+db_host+":"+db_port+")/"+db_name)
 	if err != nil {
 		return nil, err
 	}
