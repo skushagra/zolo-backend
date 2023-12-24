@@ -8,6 +8,7 @@ package main // root file of the project with package name main
 
 import (
 	"net/http"            // Go module to handle HTTP requests
+	"zolo/backend/db"     // Go module to handle utility functions
 	"zolo/backend/router" // Go module to handle calls at endpoints
 )
 
@@ -24,5 +25,6 @@ func runBackend() {
 * Function to run the backend
  */
 func main() {
+	db.Setup()   // setup the database
 	runBackend() // run the backend
 }

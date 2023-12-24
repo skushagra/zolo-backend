@@ -185,7 +185,8 @@ func Connect() (*sql.DB, error) {
 		return nil, errors.New("DB_NAME is not set")
 	}
 
-	db, err := sql.Open("mysql", db_user+":"+db_pass+"@tcp("+db_host+":"+db_port+")/"+db_name)
+	// db, err := sql.Open("mysql", db_user+":"+db_pass+"@tcp("+db_host+":"+db_port+")/"+db_name)
+	db, err := sql.Open("mysql", "kali:kali@tcp(127.0.0.1:3306)/zolo")
 	if err != nil {
 		return nil, err
 	}
