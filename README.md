@@ -1,16 +1,26 @@
 # Zolo Book Sharing Backend
 
-## Setup
+## Enviornment Variables
+
+- `DB_USER` - To store username of the mysql user (default = "kali")
+- `DB_PASS` - To store password of the mysql user (default = "kali")
+- `DB_HOST` - To store hostname of the mysql database (default = "127.0.0.1")
+- `DB_PORT` - To store port of the mysql database (default = "3306")
+- `DB_NAME` - To store the database name (default = "zolo")
+
+
+## API Setup
 1. Install and setup go on your system.
-2. Install and setup mysql on you system. Createa a DB with the followinf schema :-
+2. Create a MySQL database in your machine and store database details in the enviornment
+3. The Database has the following design. 
  ![image](https://github.com/skushagra/zolo-backend/assets/66439372/89d0bafa-7ba2-431b-a705-094609ffb76a)
 
-3. Clone the git repository
+4. Clone the git repository
 
 ```
 git clone https://github.com/skushagra/zolo-backend.git
 ```
-4. Get the requirements 
+5. Get the requirements 
 ```
 go get .
 ```
