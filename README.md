@@ -71,3 +71,7 @@ Request Payload
 
 ### 5. POST `/api/v1/booky/<book_id>/borrow/<borrow_id>`
 Returns the details of the borrow request with the given borrow id.
+
+
+
+A postman collection with sample API calls has been uploaded on the repo.
