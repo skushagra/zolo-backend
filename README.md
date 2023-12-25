@@ -48,7 +48,6 @@ Adds a new book to the database.
 ```
 Request Payload 
 {
-	id            int
 	title         string
 	author        string
 	available_till string
