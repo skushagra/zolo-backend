@@ -1,13 +1,11 @@
 package models
 
 import (
-	// Go module to handle SQL calls
-	// Go module to handle errors
 	"os" // Go module to handle OS calls
 
 	_ "github.com/go-sql-driver/mysql" // Go module to handle MySQL calls
-	"gorm.io/driver/mysql"
-	"gorm.io/gorm"
+	"gorm.io/driver/mysql"             // Go module to handle MySQL calls
+	"gorm.io/gorm"                     // Go module to implement ORM
 )
 
 /**
@@ -19,6 +17,8 @@ func Setup() {
 	if err != nil {
 		panic("Setup() :-> Error connecting to database")
 	}
+
+	// Migrate the schema
 	db.AutoMigrate(
 		&Lenders{},
 		&Books{},

@@ -31,26 +31,6 @@ func AllBooks() []Books {
 }
 
 /**
-* Function to add a book for sharing by a user
-* @param book Book to be added
- */
-func AddBook(book Books) string {
-
-	db, err := connect()
-	if err != nil {
-		return "Error connecting to database"
-	}
-
-	result := db.Create(&book)
-	if result.Error != nil {
-		return "Error adding book"
-	}
-
-	return "Book added successfully"
-
-}
-
-/**
 * Function to get all books shared by a user
 * @param id ID of the user
 * @return Book Books with the given ID
@@ -71,9 +51,31 @@ func GetBook(id int) Books {
 }
 
 /**
+* Function to add a book for sharing by a user
+* @param book Book to be added
+ */
+func AddBook(book Books) string {
+
+	db, err := connect()
+	if err != nil {
+		panic("Error connecting to database")
+	}
+
+	result := db.Create(&book)
+	if result.Error != nil {
+		panic("Error adding book")
+	}
+
+	return "Book added successfully"
+
+}
+
+/**
 * Function to get all books shared by a user
 * @param id ID of the book to be borrowed
-* @param borrower Borrower details
+* @param borrowerId ID of the user who is borrowing the book
+* @param startTime Date and time when the book is borrowed
+* @param endTime Date and time when the book is returned
  */
 func BorrowBook(id int, borrowerId int, startTime string, endTime string) {
 	db, err := connect()

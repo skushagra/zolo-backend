@@ -1,3 +1,5 @@
+// Description: This file contains the models for the database tables.
+
 package models
 
 type Lenders struct {

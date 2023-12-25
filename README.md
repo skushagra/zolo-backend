@@ -10,6 +10,8 @@ This repository contains the backend for an application that allows users to sha
 - `DB_PORT` - To store port of the mysql database (default = "3306")
 - `DB_NAME` - To store the database name (default = "zolo")
 
+The database by default does not have any lenders so remember to add a few lenders before proceeding.
+
 
 ## API Setup
 1. Install and setup go on your system.
@@ -48,11 +50,11 @@ Adds a new book to the database.
 ```
 Request Payload 
 {
-	title         string
-	author        string
-	available_till string
-	genre         string
-	hosted_by      int
+	book_name         string
+	book_author       string
+	available_till    string
+	genre             string
+	hosted_by         int
 }
 ```
 
@@ -61,9 +63,9 @@ Borrows a book from the database with the given book id.
 ```
 Request Payload 
 {
-    id int
-    start_time datetime string 
-    end_time datetime string
+    borrower_id  int
+    start_time   datetime-string 
+    end_time     datetime-string
 }
 ```
 
