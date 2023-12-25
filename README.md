@@ -55,6 +55,7 @@ Request Payload
 	available_till    string
 	genre             string
 	hosted_by         int
+	available	  int (set to 1)
 }
 ```
 
